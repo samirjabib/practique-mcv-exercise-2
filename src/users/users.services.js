@@ -10,5 +10,5 @@ const getUsersInDb = (req, res) => {
 
 
 module.exports = {
-    getAllUsers
+    getUsersInDb
 };

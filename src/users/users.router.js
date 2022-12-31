@@ -1,11 +1,11 @@
 const { Router } = require('express');
 
-const { getAllUsers } = require('./users.services')
+const { getUsersInDb } = require('./users.services')
 
 const usersRouter = require('express').Router();
 
 
-usersRouter.get('/users', getAllUsers);
+usersRouter.get('/users', );
 
 usersRouter.post('/users');
 
