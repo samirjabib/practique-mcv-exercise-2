@@ -24,6 +24,8 @@ const getUserWithId = ( req, res ) => {
 
     if(id){
         const user = getUserById(id)
+        console.log(user)
+
         res.status(200).json(user)
     } else {
         res.status(400).json({message:'missing data'});

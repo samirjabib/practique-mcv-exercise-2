@@ -11,7 +11,16 @@ const uuid = require('uuid')
 // 	birthday: 'YYYY/MM/DD'
 // }
 
-const usersDB = [];
+const usersDB = [
+    {
+        "first_name": "samir elias",
+        "last_name": "jabib caro",
+        "email": "string",
+        "password": "0265dante",
+        "birthday": "1996/06/02",
+        "id": "90dcb5cd-8857-4a0a-a85d-07cc6956cf56"
+    }
+];
 
 const getAllUsers = () => {
     return usersDB
@@ -33,6 +42,7 @@ const createUser = (data) => {
 
 const getUserById = (id) => {
     const data = usersDB.find( user => user.id === id);
+    console.log(usersDB)
     return data
 }
 
