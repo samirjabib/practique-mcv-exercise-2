@@ -1,4 +1,4 @@
-const { getAllUsers, createUser } = require('./users.controllers');
+const { getAllUsers, createUser, getUserById } = require('./users.controllers');
 
 
 const getUsersInDb = (req, res) => {
@@ -19,11 +19,20 @@ const createUserInDb = (req, res) => {
     };
 }
 
+const getUserWithId = ( req, res ) => {
+    const id = req.params.id;
 
-
+    if(id){
+        const user = getUserById(id)
+        res.status(200).json(user)
+    } else {
+        res.status(400).json({message:'missing data'});
+    }
+}
 
 
 module.exports = {
     getUsersInDb,
-    createUserInDb
+    createUserInDb,
+    getUserWithId,
 };

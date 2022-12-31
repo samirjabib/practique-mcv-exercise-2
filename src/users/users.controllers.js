@@ -31,9 +31,15 @@ const createUser = (data) => {
     return newUser;
 }
 
+const getUserById = (id) => {
+    const data = usersDB.find( user => user.id === id);
+    return data
+}
+
 
 
 module.exports = {
     getAllUsers,
-    createUser
+    createUser,
+    getUserById
 }
