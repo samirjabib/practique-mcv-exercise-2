@@ -1,4 +1,4 @@
-const { getAllUsers } = require('./users.controllers');
+const { getAllUsers, createUser } = require('./users.controllers');
 
 
 const getUsersInDb = (req, res) => {
@@ -8,7 +8,17 @@ const getUsersInDb = (req, res) => {
 }
 
 
+const createUserInDb = (req, res) => {
+
+    const data = createUser(req.body)
+
+    res.status(201).json(data)
+
+}
+
+
 
 module.exports = {
-    getUsersInDb
+    getUsersInDb,
+    createUserInDb
 };

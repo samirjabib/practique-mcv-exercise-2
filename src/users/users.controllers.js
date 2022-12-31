@@ -12,13 +12,7 @@ const uuid = require('uuid')
 // }
 
 const usersDB = [
-    {
-        id:uuid,
-        first_name:'samir',
-        last_name:'elias',
-        email:'samir.jc123@gmail.com',
-        password:'4231Samir',
-    }
+   
 ];
 
 
@@ -26,8 +20,22 @@ const getAllUsers = () => {
     return usersDB
 };
 
+const createUser = (data) => {
+    console.log(data);
+
+    const newUser = {
+        ...data,
+        iid:uuid.v4()
+    }
+
+    usersDB.push(newUser);
+
+    return newUser;
+}
+
 
 
 module.exports = {
-    getAllUsers
+    getAllUsers,
+    createUser
 }

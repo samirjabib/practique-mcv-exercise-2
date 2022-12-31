@@ -1,13 +1,12 @@
-const { Router } = require('express');
 
-const { getUsersInDb } = require('./users.services')
+const { getUsersInDb, createUserInDb } = require('./users.services')
 
 const usersRouter = require('express').Router();
 
 
-usersRouter.get('/users', );
+usersRouter.get('/users', getUsersInDb );
 
-usersRouter.post('/users');
+usersRouter.post('/users', createUserInDb);
 
 usersRouter.get('/users/:id');
 
