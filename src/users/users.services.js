@@ -9,12 +9,17 @@ const getUsersInDb = (req, res) => {
 
 
 const createUserInDb = (req, res) => {
-
     const data = createUser(req.body)
 
-    res.status(201).json(data)
-
+    if(data){
+        const newUser = createUser(data);
+        res.status(201).json(newUser);
+    } else {
+        res.status(400).json({message:'missing data'});
+    };
 }
+
+
 
 
 

@@ -11,10 +11,7 @@ const uuid = require('uuid')
 // 	birthday: 'YYYY/MM/DD'
 // }
 
-const usersDB = [
-   
-];
-
+const usersDB = [];
 
 const getAllUsers = () => {
     return usersDB
@@ -25,10 +22,11 @@ const createUser = (data) => {
 
     const newUser = {
         ...data,
-        iid:uuid.v4()
+        id:uuid.v4()
     }
 
     usersDB.push(newUser);
+    console.log(usersDB, 'this is the the console.log in user db')
 
     return newUser;
 }
