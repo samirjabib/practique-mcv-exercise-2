@@ -13,7 +13,11 @@ const uuid = require('uuid')
 
 const usersDB = [
     {
-        
+        id:uuid,
+        first_name:'samir',
+        last_name:'elias',
+        email:'samir.jc123@gmail.com',
+        password:'4231Samir',
     }
 ];
 
